@@ -75,6 +75,7 @@ class EDSeq2SeqProcessor(EDDataProcessor):
                       input_file: str) -> None:
         """Obtains a collection of `EDInputExample`s for the dataset."""
         self.examples = []
+        # import os; print(os.getcwd())
         with open(input_file, "r", encoding="utf-8") as f:
             for idx, line in enumerate(tqdm(f.readlines(), desc="Reading from %s" % input_file)):
                 item = json.loads(line.strip())

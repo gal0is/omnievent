@@ -6,31 +6,31 @@ do_ED_infer: True
 # top-level config #
 paradigm: seq2seq
 task_name: ED
-dataset_name: ACE2005-en
-language: English
-test_exists_labels: True
+dataset_name: ACE2005-ZH
+language: Chinese
+test_exists_labels: True 
 
 # file path # 
-output_dir: output/ACE2005-en
-type2id_path: ../../data/processed/ace2005-en/label2id.json
-train_file: ../../data/processed/ace2005-en/train.unified.jsonl
-validation_file: ../../data/processed/ace2005-en/valid.unified.jsonl
-test_file: ../../data/processed/ace2005-en/test.unified.jsonl
+output_dir: output/ACE2005-ZH
+type2id_path: ../../data/processed/ace2005-zh/label2id.json
+train_file: ../../data/processed/ace2005-zh/train.unified.jsonl
+validation_file: ../../data/processed/ace2005-zh/valid.unified.jsonl
+test_file: ../../data/processed/ace2005-zh/test.unified.jsonl
 
 # config for data processor #
-truncate_in_batch: True 
+truncate_in_batch: True
 return_token_type_ids: False 
 truncate_seq2seq_output: True 
 
 # model config #
-model_type: t5
-model_name_or_path: t5-large
-hidden_size: 1024
+model_type: mt5
+model_name_or_path: google/mt5-base
+hidden_size: 768
 aggregation: none
 
 # training config #
 num_train_epochs: 10
-max_seq_length: 160
+max_seq_length: 256
 max_out_length: 128
 dataloader_num_workers: 2
 
@@ -40,7 +40,7 @@ predict_with_generate: True
 ignore_pad_token_for_loss: True 
 
 per_device_train_batch_size: 8
-per_device_eval_batch_size: 20
+per_device_eval_batch_size: 16
 gradient_accumulation_steps: 2
 # eval_accumulation_steps: 4
 learning_rate: 1.0e-4
@@ -61,5 +61,5 @@ save_strategy: epoch
 save_steps: 500
 
 # split inference #
-split_infer: True
+split_infer: False 
 split_infer_size: 500

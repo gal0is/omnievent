@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 import sys
-sys.path.append("../../")
+sys.path.append("../../")  # 影响import路径, 默认是当前文件所在的路径，from Omnievent就找不到
 import json
 import logging
 
