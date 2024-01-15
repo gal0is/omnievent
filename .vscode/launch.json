@@ -1,0 +1,106 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "en-s2s",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "cwd": "${fileDirname}",  //使用当前文件所在目录
+            // "cwd": "${workspaceFolder}",
+            // "env": {"PYTHONPATH": "${workspaceFolder}"},   //模块import路径
+            "args": [
+                "../../config/all-models/ed/s2s/t5-base/t5-base.yaml"
+            ]
+        },
+        {
+            "name": "en-s2s-large",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "cwd": "${fileDirname}",  //使用当前文件所在目录
+            // "cwd": "${workspaceFolder}",
+            // "env": {"PYTHONPATH": "${workspaceFolder}"},   //模块import路径
+            "args": [
+                "../../config/all-models/ed/s2s/t5-large/t5-large.yaml"
+            ]
+        },
+        {
+            "name": "en-sl-roberta",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "cwd": "${fileDirname}",  //使用当前文件所在目录
+            // "cwd": "${workspaceFolder}",
+            // "env": {"PYTHONPATH": "${workspaceFolder}"},   //模块import路径
+            "args": [
+                "../../config/all-models/ed/sl/roberta-base/crf.yaml"
+            ]
+        },
+        {
+            "name": "en-sl-roberta-wo",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "cwd": "${fileDirname}",  //使用当前文件所在目录
+            // "cwd": "${workspaceFolder}",
+            // "env": {"PYTHONPATH": "${workspaceFolder}"},   //模块import路径
+            "args": [
+                "../../config/all-models/ed/sl/roberta-base/wo-crf.yaml"
+            ]
+        },
+        {
+            "name": "en-sl-roberta-large",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "cwd": "${fileDirname}",  //使用当前文件所在目录
+            // "cwd": "${workspaceFolder}",
+            // "env": {"PYTHONPATH": "${workspaceFolder}"},   //模块import路径
+            "args": [
+                "../../config/all-models/ed/sl/roberta-large/crf.yaml"
+            ]
+        },
+        {
+            "name": "en-sl-roberta-large-wo",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "cwd": "${fileDirname}",  //使用当前文件所在目录
+            // "cwd": "${workspaceFolder}",
+            // "env": {"PYTHONPATH": "${workspaceFolder}"},   //模块import路径
+            "args": [
+                "../../config/all-models/ed/sl/roberta-large/wo-crf.yaml"
+            ]
+        },
+        {
+            "name": "ace2005-zh",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "cwd": "${fileDirname}",  //使用当前文件所在目录
+            // "cwd": "${workspaceFolder}",
+            // "env": {"PYTHONPATH": "${workspaceFolder}"},   //模块import路径
+            "args": [
+                "../../config/all-models/ed/s2s/t5-base/t5-base-zh.yaml"
+            ]
+        }
+    ]
+}
