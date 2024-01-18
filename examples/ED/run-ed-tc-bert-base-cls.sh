@@ -1,0 +1,3 @@
+CUDA_VISIBLE_DEVICES=$1 python token_classification.py \
+    ../../config/all-models/ed/tc/bert-base/cls.yaml
+    
